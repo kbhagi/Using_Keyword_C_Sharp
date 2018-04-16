@@ -6,3 +6,21 @@ using System.Math;                 without having to qualify the                
                                    access type                                  double pi = M.PI;
                                    using static System.Math;
                                    double pi = PI;
+
+Examples "Using" as a Statement
+IDisposable
+       IDisposable is an interface that provides a mechanism to release unmanaged resources
+  
+  Quick IDisposible Example
+  public class BooksLibrary : IDisposable
+  {
+  public List<Book> Library { get; set;}
+  public void Dispose()
+  {
+  if (Library != null)
+  {
+  Library.Clear();
+  Library = null;
+  }
+  }
+  }
